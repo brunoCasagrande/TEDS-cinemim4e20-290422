@@ -1,0 +1,4 @@
+# Obter a lista de produtoras
+GET http://localhost:3000/api/produtora
+Content-Type: application/json
+###

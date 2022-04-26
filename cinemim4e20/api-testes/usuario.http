@@ -1,0 +1,15 @@
+# Obter a lista de usuários
+GET http://localhost:3000/api/usuarios
+Content-Type: application/json
+###
+
+# Inserir novo Usuario
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+ "nome": "Teste", 
+ "email": "183111@upf.br",
+ "senha": "1234567"
+}
+###
