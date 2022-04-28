@@ -39,7 +39,6 @@ module.exports = {
        Filme.find({
             $or: [
                 { nome: { $regex: req.params.filtro, $options: "i" } },
-                { email: { $regex: req.params.filtro, $options: "i" } },
             ],
         }, function (err, objetos) {
             if (err)

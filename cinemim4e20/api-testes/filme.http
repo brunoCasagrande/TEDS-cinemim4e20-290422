@@ -2,3 +2,24 @@
 GET http://localhost:3000/api/filme
 Content-Type: application/json
 ###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/filmes
+Content-Type: application/json
+{
+ "titulo": "X-men",
+ "sinopse": "99999-9999",
+ "dataEstreia": "2021-01-25T17:32:25.000Z"
+}
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/usuarios
+Content-Type: application/json
+{
+ "_id": "5f6cba8798eca62ccce84ba7",
+ "nome": "Jaqson alterado",
+ "email": "jaqson@teste.com",
+ "celular": "54 6543 2423"
+}
+###
