@@ -42,5 +42,5 @@ npm-debug.log*
 logs
 *.log
 npm-debug.log*
-cinemin4e20/
-mongo/
+mongo
+nova pasta

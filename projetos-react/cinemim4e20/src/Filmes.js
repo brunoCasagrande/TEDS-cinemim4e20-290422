@@ -6,25 +6,27 @@ import FilmesForm from "./FilmesForm";
 function Filmes() {
     // Declare variáveis de state
     let filmesList = [
-        { id: 1, nome: "Moonfall - Ameaça Lunar", sinopse: "No filme Moonfall, de Roland Emmerich, uma força misteriosa tira a Lua da sua órbita em torno da Terra e envia-a numa rota de colisão capaz de aniquilar a vida como a conhecemos.",
+        { id: 1, titulo: "Moonfall - Ameaça Lunar", sinopse: "No filme Moonfall, de Roland Emmerich, uma força misteriosa tira a Lua da sua órbita em torno da Terra e envia-a numa rota de colisão capaz de aniquilar a vida como a conhecemos.",
                                                  dataEstreia: "2022-04-10" }
     ];
     const [filmes, setFilmes] = useState(filmesList);
 
     const onClickAtualizar = () => {
         filmesList = [
-            { id: 1, nome: 'The Batman', sinopse: 'Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City.', dataEstreia: '2022-03-03' }
+            { id: 0, titulo: "Moonfall - Ameaça Lunar", sinopse: "No filme Moonfall, de Roland Emmerich, uma força misteriosa tira a Lua da sua órbita em torno da Terra e envia-a numa rota de colisão capaz de aniquilar a vida como a conhecemos.",
+                                                 dataEstreia: "2022-04-10" },
+            { id: 1, titulo: 'The Batman', sinopse: 'Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City.', dataEstreia: '2022-03-03' }
         ];
-        setFilmes(FilmesList);
+        setFilmes(filmesList);
     };
 
     // operação inserir
-    const initialState = { id: null, nome: "", sinopse: "", dataEstreia: "" };
+    const initialState = { id: null, titulo: "", sinopse: "", dataEstreia: "" };
     const [filme, setFilme] = useState(initialState);
     const [editando, setEditando] = useState(false);
 
     const onClickInserir = () => {
-        setFilmes(initialState);
+        setFilme(initialState);
         setEditando(true);
     };
 
@@ -46,7 +48,7 @@ function Filmes() {
     };
 
     const editar = (id) => {
-        setFilmes(filmes.filter((filme) => filme.id == id)[0]);
+        setFilme(filmes.filter((filme) => filme.id == id)[0]);
         setEditando(true);
     };
 
@@ -71,7 +73,7 @@ function Filmes() {
             <div>
                 <FilmesForm
                     filme={filme}
-                    setFilmes={setFilmes}
+                    setFilme={setFilme}
                     onClickSalvar={onClickSalvar}
                     onClickCancelar={onClickCancelar}
                 />

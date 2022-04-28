@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 
-function FilmesForm(props) {
+function FilmesForm(props) { 
     // Declare variáveis de state
     const handleInputChange = (event) => {
         const { name, value } = event.target
-        props.setFilmes({ ...props.filme, [name]: value })
+        props.setFilme({ ...props.filme, [name]: value })
     }
 
     return (
         <div>
             <form>
                 <div class="form-group">
-                    <label>Nome</label>
-                    <input class="form-control" type="text" name="nome"
-                        value={props.filme.nome} onChange={handleInputChange} />
+                    <label>titulo</label>
+                    <input class="form-control" type="text" name="titulo"
+                        value={props.filme.titulo} onChange={handleInputChange} />
                 </div>               
                 <div class="form-group">
                     <label>Sinopse</label>
-                    <input class="form-control" type="number" name="estoque"
+                    <input class="form-control" type="text" name="Sinopse"
                         value={props.filme.sinopse} onChange={handleInputChange} />
                 </div>
                 <div class="form-group">
                     <label>Data De Estreia</label>
-                    <input class="form-control" type="number" name="valor"
+                    <input class="form-control" type="text" name="dataEstreia"
                         value={props.filme.dataEstreia} onChange={handleInputChange} />
                 </div>
                 <div class="form-group">

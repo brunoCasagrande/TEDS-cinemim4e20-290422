@@ -16,7 +16,7 @@ function FilmesList(props) {
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome</th>
+                        <th>titulo</th>
                         <th>Sinopse</th>
                         <th>Estreia</th>
                     </tr>
@@ -26,7 +26,7 @@ function FilmesList(props) {
                         props.filmes.map((o, index) => (
                             <tr key={index}>
                                 <td>{index}</td>
-                                <td>{o.nome}</td>
+                                <td>{o.titulo}</td>
                                 <td>{o.sinopse}</td>
                                 <td>{o.dataEstreia}</td>
                                 
