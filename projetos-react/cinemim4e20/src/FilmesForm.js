@@ -17,7 +17,7 @@ function FilmesForm(props) {
                 </div>               
                 <div class="form-group">
                     <label>Sinopse</label>
-                    <input class="form-control" type="text" name="Sinopse"
+                    <input class="form-control" type="text" name="sinopse"
                         value={props.filme.sinopse} onChange={handleInputChange} />
                 </div>
                 <div class="form-group">
