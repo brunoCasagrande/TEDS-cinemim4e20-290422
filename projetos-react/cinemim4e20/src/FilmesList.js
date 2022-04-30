@@ -29,12 +29,13 @@ function FilmesList(props) {
                                 <td>{o.titulo}</td>
                                 <td>{o.sinopse}</td>
                                 <td>{o.dataEstreia}</td>
-                                
-                                    <button onClick={() => props.editar(o.id)} 
+                                <td>
+                                    <button onClick={() => props.editar(o._id)} 
                                     className="btn btn-primary btn-sm">Editar</button>
                                     
-                                    <button onClick={() => props.excluir(o.id)}
+                                    <button onClick={() => props.excluir(o._id)}
                                     className="btn btn-danger btn-sm">Excluir</button>
+                                    </td>
                             </tr>
                         ))
                     ) : (

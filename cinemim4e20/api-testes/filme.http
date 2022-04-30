@@ -38,6 +38,6 @@ Content-Type: application/json
 ###
 
 # Obter colaborador filtrando
-GET http://localhost:3000/filme/filtro/x-men
+GET http://localhost:3000/filme/filtro/X-men
 Content-Type: application/json
 ###
